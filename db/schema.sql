@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS  `burgers_db`;
+USE `burgers_db`;
+
+
+CREATE TABLE IF NOT EXISTS `burgers` (
+
+id INT NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (id),
+
+burger_name VARCHAR(40) NOT NULL,
+devoured BOOLEAN DEFAULT 0
+
+)
