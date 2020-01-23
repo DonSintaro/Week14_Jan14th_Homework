@@ -1,15 +1,27 @@
+renderList();
+
+
+
 $(document).on("click",".eatBtn",function(){
     let burgerBufferID = $(this).attr("data-name");
     let burgerID = (burgerBufferID.split("db"))[1];
-    console.log(burgerID);
-
+    
+    updateBurger(burgerID).then(function(data){
+        console.log(data);
+        renderList();
+    })
 })
 
-// Currently need to make on click for entry for burger, and also need to finish with update/create.
-// then server side create and update.
+$(".startB").on("click",function(){
+    let burgerNameBuffer = $("textarea").val();
+    $("textarea").val("");
+    createBurger(burgerNameBuffer).then(function(data){
+        console.log(data);
+        renderList(); 
+    })
+})
 
 
-renderList();
 
 async function getOrdered() {
     console.log("Got to ajax request for ordered");
@@ -28,19 +40,18 @@ async function getDevoured() {
 };
 
 
-async function updateBurgers(id){
+async function updateBurger(id){
     console.log("Got to ajax for update");
     return await $.ajax({
-        url: "/api/ordered/" + id,
+        url: "/api/update/" + id,
         method: "PUT"
     })
 }
 
-async function createBuger(name){
-    console.log("Got to ajax for create");
+async function createBurger(name){
+    console.log("Got to ajax for create " + name);
     return await $.ajax({
-        url: "/api/create/",
-        data: name,
+        url: "/api/create/" + name,
         method: "POST"
     })
 }
@@ -76,4 +87,3 @@ getAndRenderOrdered();
 getAndRenderDevoured();
 
 }
-

@@ -18,7 +18,7 @@
   "production": {
     "username": "root",
     "password": "TempServerPassword",
-    "database": "database_production",
+    "database": "burgers_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
