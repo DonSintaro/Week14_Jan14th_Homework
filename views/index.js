@@ -26,7 +26,21 @@ function render()
 
 <div class="container row content"> 
 
-  <div class="col-3"> 
+<div class="col-12 col-md-6 order-md-2">
+<div class="container row" id="innerC">
+<p id="burgerEntry">Enter the name of the burger you would love to eat!</p>
+  <div class="input-group">
+    <textarea class="form-control Menu" rows="1" aria-label="With textarea" maxlength="32" ></textarea>
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary startB" type="button" id="button-addon2"> <img src="./assets/burger.gif" alt="burgerImg" style="height: 70px; width:70px;" /> </button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+  <div class="col-12 col-md-3 order-md-1"> 
     <h2 class="subTitles">Ordered</h2>
     <div id="ordered">
       
@@ -38,18 +52,8 @@ function render()
     </div>
   </div>
 
-  <div class="col-6">
-    <div class="container row" id="innerC">
-      <div class="input-group">
-        <textarea class="form-control Menu" rows="1" aria-label="With textarea" maxlength="32" ></textarea>
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary startB" type="button" id="button-addon2"><h2>Make it!</h2></button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-    <div class="col-3">
+    <div class="col-12 col-md-3 order-md-3">
       <h2 class="subTitles">Devoured</h2>
       <div id="devoured">
         <!--  -->
