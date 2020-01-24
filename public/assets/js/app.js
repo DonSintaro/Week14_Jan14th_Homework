@@ -21,8 +21,6 @@ $(".startB").on("click",function(){
     })
 })
 
-
-
 async function getOrdered() {
     console.log("Got to ajax request for ordered");
     return await $.ajax({

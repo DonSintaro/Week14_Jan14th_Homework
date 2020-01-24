@@ -42,7 +42,6 @@ async function readyTemplates(){
 
 readyTemplates();
 
-
 router.get("/", function(req,res){
     res.send(index.render());
 });
