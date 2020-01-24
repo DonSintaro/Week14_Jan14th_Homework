@@ -16,10 +16,10 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": "TempServerPassword",
-    "database": "burgers_db",
-    "host": "127.0.0.1",
+    "username": "fdmod746i7fnzkmx",
+    "password": "up3zugbi2hoodwfo",
+    "database": "vtg0uoo6zub90q5q",
+    "host": "tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   }
